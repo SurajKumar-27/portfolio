@@ -4,8 +4,7 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/icons8-s-64.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0e0f13" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#0f3a72" />
     <title>Suraj Kumar Marepally · Software Engineer</title>
     <meta name="description" content="Software engineer at The Hackett Group building SAP-integrated procurement platforms, invoice automation, and Model Context Protocol services for LLMs." />
     <meta property="og:type" content="website" />
@@ -16,14 +15,13 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
     <script>
-      // Set the theme before first paint so there's no flash of the wrong colours.
+      // Pick the print style before first paint so the page never flashes the wrong colours.
       (function () {
         var t;
-        try { t = localStorage.getItem('theme'); } catch (e) {}
-        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        document.documentElement.dataset.theme = t;
+        try { t = localStorage.getItem('print'); } catch (e) {}
+        document.documentElement.dataset.theme = t === 'whiteprint' ? 'whiteprint' : 'blueprint';
       })();
     </script>
   </head>
